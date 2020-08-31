@@ -11,4 +11,8 @@ class TestGetWebPage(unittest.TestCase):
 
 
 if __name__ == '__main__':
+    # Jenkins report outputter
+    import xmlrunner
+    runner = xmlrunner.XMLTestRunner(output='test-reports')
+    unittest.main(testRunner=runner)
     unittest.main()

@@ -10,6 +10,11 @@ pipeline {
       steps {
         sh 'python webrequest_test.py'
       }
+      post {
+        always {
+          junit 'test-reports/*.xml'
+        }
+      }
     }
   }
 }
